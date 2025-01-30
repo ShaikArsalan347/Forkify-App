@@ -2,6 +2,9 @@ import { async } from "regenerator-runtime";
 import { API_URL, RES_PER_PAGE } from "./views/config.js";
 import { getJSON } from "./helpers.js";
 // import { search } from "core-js/fn/symbol";
+if (module.hot) {
+  module.hot.accept();
+}
 export const state = {
   recipe: {},
   search: {
@@ -50,9 +53,10 @@ export const loadSearchResult = async function (query) {
     throw err;
   }
 };
+
 export const getSearchResultsPage = function (page = state.search.page) {
-  state.search.page;
-  const start = (page - 1) * state.search.resultsPerPage;
-  const end = page * state.search.resultsPerPage;
+  state.search.page = page;
+  let start = (page - 1) * state.search.resultsPerPage;
+  let end = page * state.search.resultsPerPage;
   return state.search.results.slice(start, end);
 };

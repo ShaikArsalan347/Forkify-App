@@ -56,7 +56,3 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markUp);
   }
 }
-
-export function arsalan() {
-  console.log("ayub");
-}

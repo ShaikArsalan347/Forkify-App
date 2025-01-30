@@ -8,7 +8,7 @@
     "main": false
   },
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Shaik Arsalan",

@@ -10,7 +10,7 @@
     transform-origin: top;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
@@ -100,7 +100,7 @@
   }
 
   &__user-generated {
-    background-color: darken($color-grey-light-2, 2%);
+    // background-color: darken($color-grey-light-2, 2%);
 
     display: flex;
     align-items: center;
